@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 	}
 
 	input = fopen(argv[1], "r");
-	output = fopen("encoding.txt", "w");
+	output = fopen("digits.pi", "w");
 	while (!(feof(input) || ferror(input)))
 	{
 		fscanf(input, "%c", &c);
