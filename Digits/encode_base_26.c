@@ -14,6 +14,7 @@ int main(int argc, char** argv)
 
 	input = fopen(argv[1], "r");
 	output = fopen("digits.pi", "w");
+
 	while (!(feof(input) || ferror(input)))
 	{
 		fscanf(input, "%c", &c);
@@ -31,7 +32,7 @@ int main(int argc, char** argv)
 		}
 		fprintf(output, "%c", 'a' + alphabetIndex);
 	}
-
+	
 	fclose(input);
 	fclose(output);
 	return 0;
