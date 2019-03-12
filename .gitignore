@@ -330,5 +330,4 @@ ASALocalRun/
 .mfractor/
 
 # pi-search specific
-*.pi
-*.raw
+pi*.txt

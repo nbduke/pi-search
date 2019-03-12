@@ -20,8 +20,8 @@ int main (int argc, char** argv)
 
 	base = strtod(argv[1], 0);
 	digits = strtod(argv[2], 0);
-	prec = ceil(log2(base) * digits) + 1;
-	output = fopen("digits.raw", "w");
+	prec = ceil(log2(base) * digits) - 1;
+	output = fopen("pi.txt", "w");
 	
 	mpfr_init2(pi, (size_t)prec);
 	mpfr_const_pi(pi, MPFR_RNDD);
@@ -29,7 +29,8 @@ int main (int argc, char** argv)
 	digits_written = mpfr_out_str(
 		output,
 		(int)base,
-		(size_t)digits, pi,
+		(size_t)digits,
+		pi,
 		MPFR_RNDD
 	);
 	
